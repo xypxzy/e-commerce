@@ -1,17 +1,36 @@
+import {Link} from "react-router-dom";
 import cls from './Header.module.css'
+
+const navigations = [
+    {
+        name: 'Home',
+        path: '/'
+    },
+    {
+        name: 'Products',
+        path: '/products'
+    },
+    {
+        name: 'About',
+        path: '/about'
+    },
+    {
+        name: 'Contact',
+        path: '/contact'
+    }
+]
 
 function Header() {
     return (
         <header className={cls.header}>
             <div className={cls.wrapper}>
-                <a className={cls.logo}>
+                <Link to={'/'} className={cls.logo}>
                     E-commerce
-                </a>
+                </Link>
                 <nav className={cls.nav}>
-                    <a className={cls.nav_link}>Home</a>
-                    <a className={cls.nav_link}>Products</a>
-                    <a className={cls.nav_link}>About</a>
-                    <a className={cls.nav_link}>Contact</a>
+                    {navigations.map(nav => (
+                        <Link key={nav.path} to={nav.path} className={cls.nav_link}>{nav.name}</Link>
+                    ))}
                 </nav>
                 <button className={cls.btn}>                {/*IF NOT TO LOGIN*/}
                     Login / Register

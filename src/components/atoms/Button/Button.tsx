@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 function Button(props: ButtonProps) {
-    const {color = 'primary', size = 'm', children} = props;
+    const {color = 'primary', size = 'm', children, ...otherProps} = props;
 
     return (
         <button
@@ -16,7 +16,9 @@ function Button(props: ButtonProps) {
                 ${cls.button}
                 ${color === 'primary' ? cls.button__primary : cls.button__secondary}
                 ${size === 'm' ? cls.m : cls.l}
-                `}>
+                `}
+            {...otherProps}
+        >
             {children}
         </button>);
 }

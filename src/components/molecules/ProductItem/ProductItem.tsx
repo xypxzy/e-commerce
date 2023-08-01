@@ -1,17 +1,13 @@
 import cls from "./ProductItem.module.css";
+import {ProductProps} from "../../../utils/consts.ts";
+import {Link} from "react-router-dom";
 
-export interface ProductItemProps {
-    title: string,
-    price: number,
-    category: string,
-    image: string
-}
 
-function ProductItem(props: ProductItemProps) {
-    const { category, image, price, title} = props;
+function ProductItem(props: ProductProps) {
+    const { category, image, price, title, id} = props;
 
     return (
-        <div className={cls.product}>
+        <Link to={`/product/${id}`} className={cls.product}>
             <a className={cls.link}>
                 <img alt={title} className={cls.img}
                      src={image}/>
@@ -21,7 +17,7 @@ function ProductItem(props: ProductItemProps) {
                 <h2 className={cls.description__title}>{title}</h2>
                 <p className={cls.price}>${price}</p>
             </div>
-        </div>
+        </Link>
     );
 }
 

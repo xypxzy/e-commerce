@@ -1,6 +1,6 @@
 import cls from './Products.module.css';
-import {ProductProps} from "../../organism/Home/Home.tsx";
 import ProductItem from "../ProductItem/ProductItem.tsx";
+import {ProductProps} from "../../../utils/consts.ts";
 
 interface Props {
     products: ProductProps[]
@@ -15,10 +15,12 @@ function Products({products}: Props) {
                         products.map((item) => (
                             <ProductItem
                                 key={item.id}
+                                id={item.id}
                                 title={item.title}
                                 price={item.price}
                                 category={item.category}
                                 image={item.image}
+                                description={item.description}
                             />
                         ))
                     }

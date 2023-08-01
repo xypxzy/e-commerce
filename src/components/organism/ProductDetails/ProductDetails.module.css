@@ -1,0 +1,31 @@
+.productDetails {
+    @apply text-gray-600 overflow-hidden
+}
+
+.wrapper {
+    @apply container px-5 py-24 mx-auto
+}
+
+.info {
+    @apply lg:w-4/5 mx-auto flex flex-wrap
+}
+
+.img {
+    @apply lg:w-1/2 w-full lg:h-auto max-h-[580px] h-64 object-contain object-center rounded
+}
+
+.header {
+    @apply lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0
+}
+
+.brand {
+    @apply text-sm  text-gray-500 tracking-widest uppercase
+}
+
+.title {
+    @apply text-gray-900 text-3xl  font-medium mb-1
+}
+
+.description {
+    @apply leading-relaxed;
+}
