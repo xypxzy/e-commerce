@@ -1,0 +1,29 @@
+.header {
+    @apply text-gray-600 shadow-lg;
+}
+
+.wrapper {
+    @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
+}
+
+/*Logo*/
+
+.logo {
+    @apply font-medium text-xl text-gray-900 mb-4 md:mb-0;
+}
+
+/*Navigation*/
+
+.nav {
+    @apply md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center
+}
+
+.nav_link {
+    @apply mr-5 hover:text-gray-900 cursor-pointer
+}
+
+/*Button*/
+
+.btn {
+    @apply bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 text-blue-600 font-bold
+}

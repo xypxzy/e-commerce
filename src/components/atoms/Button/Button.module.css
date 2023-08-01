@@ -1,0 +1,11 @@
+.button {
+    @apply inline-flex  border-0 py-2 px-6 focus:outline-none  rounded text-lg
+}
+
+.button__primary {
+    @apply text-white bg-indigo-500 hover:bg-indigo-600
+}
+
+.button__secondary {
+    @apply text-gray-700 bg-gray-100 hover:bg-gray-200
+}

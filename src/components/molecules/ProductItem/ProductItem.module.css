@@ -1,0 +1,27 @@
+.product {
+    @apply lg:w-1/4 md:w-1/2 p-4 w-full border border-opacity-30
+}
+
+.link {
+    @apply block relative h-48 rounded overflow-hidden
+}
+
+.img {
+    @apply object-contain object-center w-full h-full block
+}
+
+.description {
+    @apply mt-4;
+}
+
+.description__category {
+    @apply text-gray-500 text-xs tracking-widest  mb-1 uppercase
+}
+
+.description__title {
+    @apply text-gray-900  text-lg font-medium
+}
+
+.price {
+    @apply mt-1
+}

@@ -1,0 +1,12 @@
+.products {
+    @apply text-gray-600
+}
+
+.wrapper {
+    @apply container px-5 py-24 mx-auto
+}
+
+.productList {
+    @apply flex flex-wrap -m-4
+
+}

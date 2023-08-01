@@ -1,0 +1,23 @@
+.footer {
+    @apply text-gray-600;
+}
+
+.wrapper {
+    @apply container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col
+}
+
+.logo {
+    @apply font-medium text-gray-900
+}
+
+.logo__title {
+    @apply text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4
+}
+
+.social_media {
+    @apply inline-flex gap-2 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start
+}
+
+.link {
+    @apply text-gray-500 cursor-pointer
+}
