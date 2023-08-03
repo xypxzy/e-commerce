@@ -2,8 +2,8 @@ import cls from './ProductDetails.module.css'
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {ProductProps} from "../../../utils/consts.ts";
-import Button from "../../atoms/Button/Button.tsx";
+import {ProductProps} from "../../utils/consts.ts";
+import Button from "../../components/atoms/Button/Button.tsx";
 
 function ProductDetails() {
     const {id} = useParams();
@@ -20,7 +20,7 @@ function ProductDetails() {
                 });
         }
         fetchProducts();
-    }, [])
+    }, [id])
 
     if (!product) {
         return (

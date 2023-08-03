@@ -1,11 +1,11 @@
-import cls from './Products.module.css';
+import cls from './ProductsList.module.css';
 import ProductItem from "../ProductItem/ProductItem.tsx";
 import {ProductProps} from "../../../utils/consts.ts";
 
 interface Props {
     products: ProductProps[]
 }
-function Products({products}: Props) {
+function ProductsList({products}: Props) {
 
     return (
         <section className={cls.products}>
@@ -30,4 +30,4 @@ function Products({products}: Props) {
     );
 }
 
-export default Products;
+export default ProductsList;
