@@ -1,11 +1,11 @@
-import cls from './ProductDetails.module.css'
+import cls from './Card.module.css'
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {ProductProps} from "../../utils/consts.ts";
 import Button from "../../components/atoms/Button/Button.tsx";
 
-function ProductDetails() {
+function Card() {
     const {id} = useParams();
     const [product, setProduct] = useState<ProductProps>()
 
@@ -85,4 +85,4 @@ function ProductDetails() {
     );
 }
 
-export default ProductDetails;
+export default Card;
