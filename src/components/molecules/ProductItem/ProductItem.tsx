@@ -14,17 +14,19 @@ function ProductItem(props: ProductProps) {
                          src={image}/>
                 </div>
                 <div className={cls.buttons}>
-                    <button className="flex rounded-xl justify-center items-center text-white w-8 h-8 bg-red-500">
-                        <BsPlus className="text-xl"/>
+                    <button className={cls.addBtn}>
+                        <BsPlus />
                     </button>
                     <Link to={`/product/${id}`}
-                          className={"w-8 h-8 rounded-xl bg-white flex justify-center items-center drop-shadow-xl"}>
+                          className={cls.cardBtn}>
                         <BsEyeFill/>
                     </Link>
                 </div>
                 <div className={cls.description}>
                     <h3 className={cls.description__category}>{category}</h3>
-                    <Link to={`/product/${id}`} className={cls.description__title}>{title}</Link>
+                    <Link to={`/product/${id}`} className={cls.description__title}>
+                        {title}
+                    </Link>
                     <p className={cls.price}>${price}</p>
                 </div>
         </div>
