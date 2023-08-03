@@ -6,3 +6,7 @@ export interface ProductProps {
     image: string,
     description: string,
 }
+
+export interface DrawerProps extends ProductProps {
+    amount: number
+}

@@ -1,11 +1,10 @@
 import cls from './ProductsList.module.css';
 import ProductItem from "../ProductItem/ProductItem.tsx";
-import {ProductProps} from "../../../utils/consts.ts";
+import {useContext} from "react";
+import {ProductContext} from "../../../contexts/ProductContext/ProductContext.ts";
 
-interface Props {
-    products: ProductProps[]
-}
-function ProductsList({products}: Props) {
+function ProductsList() {
+    const products = useContext(ProductContext)
 
     return (
         <section className={cls.products}>
@@ -16,16 +15,8 @@ function ProductsList({products}: Props) {
                 </div>
                 <div className={cls.productList}>
                     {
-                        products.map((item) => (
-                            <ProductItem
-                                key={item.id}
-                                id={item.id}
-                                title={item.title}
-                                price={item.price}
-                                category={item.category}
-                                image={item.image}
-                                description={item.description}
-                            />
+                        products.map((product) => (
+                            <ProductItem key={product.title} product={product} />
                         ))
                     }
                 </div>

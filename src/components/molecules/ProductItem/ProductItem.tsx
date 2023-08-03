@@ -2,10 +2,17 @@ import cls from "./ProductItem.module.css";
 import {ProductProps} from "../../../utils/consts.ts";
 import {Link} from "react-router-dom";
 import {BsEyeFill, BsPlus} from "react-icons/bs";
+import {useContext} from "react";
+import { DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
 
+interface ProductItemProps {
+    product: ProductProps;
+}
 
-function ProductItem(props: ProductProps) {
-    const {category, image, price, title, id} = props;
+function ProductItem({product}: ProductItemProps) {
+    const {addToDrawer} = useContext(DrawerContext)
+
+    const {category, image, price, title, id} = product;
 
     return (
         <div className={cls.product}>
@@ -14,7 +21,7 @@ function ProductItem(props: ProductProps) {
                          src={image}/>
                 </div>
                 <div className={cls.buttons}>
-                    <button className={cls.addBtn}>
+                    <button className={cls.addBtn} onClick={() => addToDrawer(product, id)}>
                         <BsPlus />
                     </button>
                     <Link to={`/product/${id}`}

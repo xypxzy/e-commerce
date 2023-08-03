@@ -1,5 +1,5 @@
 .header {
-    @apply text-gray-600 shadow-lg;
+    @apply text-gray-600 shadow-lg w-full fixed z-10 transition-all ;
 }
 
 .wrapper {
