@@ -5,6 +5,7 @@ import cls from './Sidebar.module.css'
 import {DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
 import CartItem from "../CartItem/CartItem.tsx";
 import {FiTrash} from "react-icons/fi";
+import {Link} from "react-router-dom";
 
 function Sidebar() {
     const {isOpen, handleClose} = useContext(SidebarContext);
@@ -25,7 +26,7 @@ function Sidebar() {
                     <IoMdArrowForward className={"text-xl"}/>
                 </div>
             </div>
-            <div className={"flex flex-col gap-y-2 h-[530px] lg:h[640px] overflow-y-auto overflow-x-hidden border-b"}>
+            <div className={"flex flex-col gap-y-2 h-[640px] lg:h[720px] overflow-y-auto overflow-x-hidden border-b"}>
                 {drawer.map(item => {
                     return (<CartItem key={item.id} cart={item}/>)
                 })}
@@ -38,6 +39,14 @@ function Sidebar() {
                     className={"cursor-pointer rounded-xl py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"}>
                     <FiTrash />
                 </div>
+            </div>
+            <div className={"flex flex-col mt-4"}>
+                <Link to={'/'} className={"bg-gray-200 rounded-xl flex p-4 justify-center items-center w-full text-black font-medium"}>
+                    View Cart
+                </Link>
+                <Link to={'/'} className={"bg-black rounded-xl flex p-4 justify-center items-center w-full text-white font-medium"}>
+                    Checkout
+                </Link>
             </div>
         </div>
     );

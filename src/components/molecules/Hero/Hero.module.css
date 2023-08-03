@@ -3,25 +3,14 @@
 }
 
 .wrapper {
-    @apply container mx-auto flex px-5 py-24 items-center justify-center flex-col;
+    @apply relative container mx-auto flex px-5 py-20 items-center justify-center flex-col;
 }
 
 .image {
-    @apply lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded;
-}
-
-.description {
-    @apply text-center lg:w-2/3 w-full;
-}
-
-.description__title {
-    @apply sm:text-4xl text-3xl mb-4 font-medium text-gray-900
-}
-
-.description__text {
-    @apply mb-8 leading-relaxed
+    @apply hidden lg:block mb-10 bg-none object-cover rounded;
 }
 
 .btn {
-    @apply flex justify-center
+    @apply uppercase absolute left-20 bottom-1/3 bg-blue-400 px-4 py-2 hover:text-white
+    hover:bg-blue-300 font-bold transition-all duration-300 rounded-2xl
 }

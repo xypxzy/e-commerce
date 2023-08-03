@@ -5,10 +5,10 @@ import ProductsList from "../../components/molecules/ProductsList/ProductsList.t
 function Home() {
 
     return (
-        <>
+        <div className={"py-20"}>
             <Hero/>
             <ProductsList />
-        </>
+        </div>
     );
 }
 
