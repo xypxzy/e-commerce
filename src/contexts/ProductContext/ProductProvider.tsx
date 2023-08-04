@@ -23,7 +23,7 @@ const ProductProvider: FC<ProductProviderProps> = ({ children }) => {
                 });
         }
         fetchProducts();
-    }, [])
+    }, [products])
 
     type sortType = 'desc' | 'asc';
     const sortCategory = (type: sortType) => {
