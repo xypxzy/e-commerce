@@ -1,4 +1,4 @@
-import ProductsList from "../../components/molecules/ProductsList/ProductsList.tsx";
+import ProductsList from "../../components/ProductsList/ProductsList.tsx";
 
 function Products() {
 

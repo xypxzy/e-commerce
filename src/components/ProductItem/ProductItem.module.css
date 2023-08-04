@@ -28,11 +28,11 @@
 }
 
 .addBtn {
-    @apply flex rounded-xl justify-center items-center text-white w-8 h-8 bg-red-500
+    @apply flex rounded-xl justify-center items-center text-white w-12 h-12 bg-red-500
 }
 
 .cardBtn {
-    @apply w-8 h-8 rounded-xl bg-white flex justify-center items-center drop-shadow-xl
+    @apply w-12 h-12 rounded-xl bg-white flex justify-center items-center drop-shadow-xl
 }
 
 .description {

@@ -1,10 +1,11 @@
 import cls from './ProductsList.module.css';
 import ProductItem from "../ProductItem/ProductItem.tsx";
 import {useContext} from "react";
-import {ProductContext} from "../../../contexts/ProductContext/ProductContext.ts";
+import {ProductContext} from "../../contexts/ProductContext/ProductContext.ts";
+import Controls from "../Controls/Controls.tsx";
 
 function ProductsList() {
-    const products = useContext(ProductContext)
+    const {products} = useContext(ProductContext)
 
     return (
         <section className={cls.products}>
@@ -13,6 +14,7 @@ function ProductsList() {
                     <h2 className="text-xs text-indigo-500 tracking-widest font-medium mb-1 uppercase">Product</h2>
                     <h1 className="sm:text-3xl text-2xl font-medium text-gray-900 uppercase">Most Popular Products</h1>
                 </div>
+                <Controls  />
                 <div className={cls.productList}>
                     {
                         products.map((product) => (

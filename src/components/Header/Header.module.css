@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply container mx-auto flex flex-wrap p-2 gap-x-4 md:flex-row items-center;
+    @apply container mx-auto flex flex-wrap p-2 md:gap-x-0 gap-x-4 md:flex-row items-center;
 }
 
 /*Logo*/

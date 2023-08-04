@@ -1,5 +1,5 @@
 import cls from './Hero.module.css'
-import HeroImg from '../../../assets/container-fluid (1).svg'
+import HeroImg from '../../assets/container-fluid (1).svg'
 import {Link} from "react-router-dom";
 function Hero() {
     return (

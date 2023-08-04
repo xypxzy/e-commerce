@@ -1,8 +1,8 @@
-import {DrawerProps} from "../../../utils/consts.ts";
+import {DrawerProps} from "../../utils/consts.ts";
 import {Link} from "react-router-dom";
 import {IoMdAdd, IoMdClose, IoMdRemove} from "react-icons/io";
 import {useContext} from "react";
-import {DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
+import {DrawerContext} from "../../contexts/DrawerContext/DrawerContext.ts";
 
 interface CardItemProps {
     cart: DrawerProps

@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom";
 import cls from './Header.module.css'
 import {useContext, useEffect, useState} from "react";
-import {SidebarContext} from "../../../contexts/SidebarContext/SidebarContext.ts";
+import {SidebarContext} from "../../contexts/SidebarContext/SidebarContext.ts";
 import {BsBag} from "react-icons/bs";
-import {DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
-import {LoginContext} from "../../../contexts/LoginContext/LoginContext.ts";
+import {DrawerContext} from "../../contexts/DrawerContext/DrawerContext.ts";
+import {LoginContext} from "../../contexts/LoginContext/LoginContext.ts";
 import {FiLogIn, FiLogOut} from "react-icons/fi";
 
 const navigations = [
@@ -56,7 +56,7 @@ function Header() {
                     ))}
                 </nav>
                 <button
-                    className="flex flex-col right-0 absolute h-8 w-12 rounded opacity-100 justify-center items-center group"
+                    className="md:hidden flex flex-col right-0 absolute h-8 w-12 rounded opacity-100 justify-center items-center group"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     <div

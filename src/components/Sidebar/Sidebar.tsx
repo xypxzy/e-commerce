@@ -1,8 +1,8 @@
 import {useContext} from "react";
-import {SidebarContext} from "../../../contexts/SidebarContext/SidebarContext.ts";
+import {SidebarContext} from "../../contexts/SidebarContext/SidebarContext.ts";
 import {IoMdArrowForward} from "react-icons/io";
 import cls from './Sidebar.module.css'
-import {DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
+import {DrawerContext} from "../../contexts/DrawerContext/DrawerContext.ts";
 import CartItem from "../CartItem/CartItem.tsx";
 import {FiTrash} from "react-icons/fi";
 import {Link} from "react-router-dom";
@@ -17,7 +17,7 @@ function Sidebar() {
     } = useContext(DrawerContext);
 
     return (
-        <div className={`${cls.sidebar} ${isOpen ? 'md:right-0 right-10' : '-right-full'}`}>
+        <div className={`${cls.sidebar} ${isOpen ? 'right-0' : '-right-full'}`}>
             <div className={cls.header}>
                 <div className={cls.title}>Shopify Bag ({itemAmount})</div>
                 <div

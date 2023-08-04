@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
-import Header from "./components/molecules/Header/Header.tsx";
-import Footer from "./components/molecules/Footer/Footer.tsx";
-import Sidebar from "./components/molecules/Sidebar/Sidebar.tsx";
+import Header from "./components/Header/Header.tsx";
+import Footer from "./components/Footer/Footer.tsx";
+import Sidebar from "./components/Sidebar/Sidebar.tsx";
 import Card from "./pages/Card/Card.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Products from "./pages/Products/Products.tsx";

@@ -1,10 +1,10 @@
 import cls from "./ProductItem.module.css";
-import {ProductProps} from "../../../utils/consts.ts";
+import {ProductProps} from "../../utils/consts.ts";
 import {Link} from "react-router-dom";
 import {BsEyeFill, BsPlus} from "react-icons/bs";
 import {useContext} from "react";
-import {DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
-import {LoginContext} from "../../../contexts/LoginContext/LoginContext.ts";
+import {DrawerContext} from "../../contexts/DrawerContext/DrawerContext.ts";
+import {LoginContext} from "../../contexts/LoginContext/LoginContext.ts";
 
 interface ProductItemProps {
     product: ProductProps;
@@ -28,7 +28,7 @@ function ProductItem({product}: ProductItemProps) {
                     {
                         !token ?
                         <Link to={'/login'}>
-                            <BsPlus/>
+                            <BsPlus className={"text-2xl"}/>
                         </Link> :
                         <BsPlus/>
                     }

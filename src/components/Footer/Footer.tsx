@@ -1,7 +1,7 @@
-import GithubIcon from '../../../assets/github.svg'
-import InstagramIcon from '../../../assets/instagram.svg'
-import TwitterIcon from '../../../assets/twitter.svg'
-import LinkedinIcon from '../../../assets/linkedin.svg'
+import GithubIcon from '../../assets/github.svg'
+import InstagramIcon from '../../assets/instagram.svg'
+import TwitterIcon from '../../assets/twitter.svg'
+import LinkedinIcon from '../../assets/linkedin.svg'
 import cls from './Footer.module.css'
 function Footer() {
     return (

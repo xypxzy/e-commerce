@@ -1,5 +1,5 @@
-import Hero from "../../components/molecules/Hero/Hero.tsx";
-import ProductsList from "../../components/molecules/ProductsList/ProductsList.tsx";
+import Hero from "../../components/Hero/Hero.tsx";
+import ProductsList from "../../components/ProductsList/ProductsList.tsx";
 
 
 function Home() {
