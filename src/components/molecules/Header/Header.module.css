@@ -25,7 +25,7 @@
 /*Button*/
 
 .btn {
-    @apply bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 text-blue-600 font-bold
+    @apply md:bg-gray-100 border-0 py-1 px-3 md:focus:outline-none md:hover:bg-gray-200 md:rounded text-base md:text-blue-600 font-bold
 }
 
 .notices {
@@ -35,20 +35,12 @@
 /*Mobile menu*/
 
 .mobileNav {
-    @apply md:hidden flex flex-col items-center justify-center w-full absolute bg-white top-16 left-0 py-4;
+    @apply md:hidden flex flex-col items-center justify-center w-full h-screen absolute bg-white top-0 left-0 py-4;
     transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
-    z-index: 20; /* Ensure the mobile menu appears above other content */
+    transform: translateY(0%);
+    opacity: 100;
 }
 
 .mobileNav.active {
     transform: translateY(0);
-}
-
-.mobileMenuButton {
-    @apply md:hidden p-2 absolute top-4 right-4 cursor-pointer;
-    z-index: 30; /* Ensure the button appears above other content */
-}
-.mobileMenuButton svg {
-    @apply text-gray-600 w-6 h-6;
 }

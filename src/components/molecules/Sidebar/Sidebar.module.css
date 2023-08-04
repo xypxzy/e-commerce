@@ -1,5 +1,5 @@
 .sidebar {
-    @apply w-full h-full fixed bg-white top-0 shadow-2xl
+    @apply w-screen h-screen fixed bg-white top-0 shadow-2xl
     md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]
 }
 

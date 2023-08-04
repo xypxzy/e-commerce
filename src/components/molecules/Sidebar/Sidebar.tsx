@@ -17,7 +17,7 @@ function Sidebar() {
     } = useContext(DrawerContext);
 
     return (
-        <div className={`${cls.sidebar} ${isOpen ? 'right-0' : '-right-full'}`}>
+        <div className={`${cls.sidebar} ${isOpen ? 'md:right-0 right-10' : '-right-full'}`}>
             <div className={cls.header}>
                 <div className={cls.title}>Shopify Bag ({itemAmount})</div>
                 <div
@@ -26,7 +26,7 @@ function Sidebar() {
                     <IoMdArrowForward className={"text-xl"}/>
                 </div>
             </div>
-            <div className={"flex flex-col gap-y-2 h-[640px] lg:h[720px] overflow-y-auto overflow-x-hidden border-b"}>
+            <div className={"flex flex-col gap-y-2 h-[580px] lg:h[640px] overflow-y-auto overflow-x-hidden border-b"}>
                 {drawer.map(item => {
                     return (<CartItem key={item.id} cart={item}/>)
                 })}
