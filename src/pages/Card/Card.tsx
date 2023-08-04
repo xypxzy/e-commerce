@@ -1,14 +1,16 @@
 import cls from './Card.module.css'
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {useContext} from "react";
 import {ProductContext} from "../../contexts/ProductContext/ProductContext.ts";
 import {DrawerContext} from "../../contexts/DrawerContext/DrawerContext.ts";
 import {BiHeart} from "react-icons/bi";
+import {LoginContext} from "../../contexts/LoginContext/LoginContext.ts";
 
 function Card() {
     const {id} = useParams();
     const products = useContext(ProductContext)
     const {addToDrawer} = useContext(DrawerContext)
+    const {token} = useContext(LoginContext)
 
     if(!id) {
         return;
@@ -37,10 +39,14 @@ function Card() {
                             <span className="title-font font-medium text-2xl text-gray-900">${product.price}</span>
                             <div className="flex items-center  gap-2">
                                 <button
-                                    onClick={() => addToDrawer(product, parseInt(id))}
+                                    onClick={() => (token && addToDrawer(product, parseInt(id)))}
                                     className=" bg-black px-8 py-4 text-white hover:bg-gray-800">
-                                    Add to cart
-                                </button>
+                                    {
+                                        token ?
+                                            <p>Add to cart</p> :
+                                            <Link to={'/login'}>Add to cart</Link>
+                                    }
+c                                </button>
                                 <button
                                     className="rounded-full w-12 h-12 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-black hover:text-red-800 hover:bg-gray-100 ml-4">
                                     <BiHeart className={""}/>

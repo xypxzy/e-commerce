@@ -4,6 +4,8 @@ import {useContext, useEffect, useState} from "react";
 import {SidebarContext} from "../../../contexts/SidebarContext/SidebarContext.ts";
 import {BsBag} from "react-icons/bs";
 import {DrawerContext} from "../../../contexts/DrawerContext/DrawerContext.ts";
+import {LoginContext} from "../../../contexts/LoginContext/LoginContext.ts";
+import {FiLogOut} from "react-icons/fi";
 
 const navigations = [
     {
@@ -26,8 +28,12 @@ const navigations = [
 
 function Header() {
     const [isActive, setIsActive] = useState<boolean>(false)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false); // Step 1
+
     const {setIsOpen, isOpen} = useContext(SidebarContext)
     const {itemAmount} = useContext(DrawerContext);
+    const {token, setToken} = useContext(LoginContext)
+
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -46,17 +52,41 @@ function Header() {
                         <Link key={nav.path} to={nav.path} className={cls.nav_link}>{nav.name}</Link>
                     ))}
                 </nav>
-                <button className={cls.btn}>                {/*IF NOT TO LOGIN*/}
-                    Login / Register
-                </button>
-                <button onClick={() => setIsOpen(!isOpen)}
-                        className={"cursor-pointer flex relative"}
+                <button
+                    className={cls.mobileMenuButton} // Step 2
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
-                    <BsBag className={"text-xl"}/>
-                    <div className={"bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center"}>
-                        {itemAmount}
-                    </div>
+                    Burger
                 </button>
+                {!token ? (
+                    <Link
+                        to={'/login'}
+                        className={cls.btn}>
+                        Login / Register
+                    </Link>
+                ) : (
+                    <>
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className={"cursor-pointer flex relative"}
+                        >
+                            <BsBag className={"text-xl"}/>
+                            <div className={cls.notices}>
+                                {itemAmount}
+                            </div>
+                        </button>
+                        <button
+                            onClick={() => {
+                                setToken('');
+                                localStorage.clear()
+                            }}
+                            className={"py-2 rounded-xl"}
+                        >
+                            <FiLogOut className={"text-xl"}/>
+                        </button>
+                    </>
+                )
+                }
             </div>
         </header>
     )

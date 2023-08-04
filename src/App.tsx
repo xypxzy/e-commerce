@@ -6,6 +6,7 @@ import Card from "./pages/Card/Card.tsx";
 import Home from "./pages/Home/Home.tsx";
 import Products from "./pages/Products/Products.tsx";
 import NotFound from "./pages/NotFound/NotFound.tsx";
+import Login from "./pages/Login/Login.tsx";
 function App() {
     return (
         <div>
@@ -14,6 +15,7 @@ function App() {
                 <Route path={'/'} element={<Home />} />
                 <Route path={'/product/:id'} element={<Card />} />
                 <Route path={'/products'} element={<Products />} />
+                <Route path={'/login'} element={<Login />} />
                 <Route path={'*'} element={<NotFound />} />
             </Routes>
             <Sidebar />

@@ -6,17 +6,20 @@ import App from './App.tsx'
 import './index.css'
 import SidebarProvider from "./contexts/SidebarContext/SidebarProvider.tsx";
 import CardProvider from "./contexts/DrawerContext/DrawerProvider.tsx";
+import LoginProvider from "./contexts/LoginContext/LoginProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <SidebarProvider>
-            <CardProvider>
-                <ProductProvider>
-                    <BrowserRouter>
-                        <App/>
-                    </BrowserRouter>
-                </ProductProvider>
-            </CardProvider>
-        </SidebarProvider>
+        <LoginProvider>
+            <SidebarProvider>
+                <CardProvider>
+                    <ProductProvider>
+                        <BrowserRouter>
+                            <App/>
+                        </BrowserRouter>
+                    </ProductProvider>
+                </CardProvider>
+            </SidebarProvider>
+        </LoginProvider>
     </React.StrictMode>,
 )
