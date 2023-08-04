@@ -8,7 +8,7 @@ import {LoginContext} from "../../contexts/LoginContext/LoginContext.ts";
 
 function Card() {
     const {id} = useParams();
-    const products = useContext(ProductContext)
+    const {products} = useContext(ProductContext)
     const {addToDrawer} = useContext(DrawerContext)
     const {token} = useContext(LoginContext)
 
