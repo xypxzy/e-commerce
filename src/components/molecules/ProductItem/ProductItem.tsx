@@ -16,10 +16,10 @@ function ProductItem({product}: ProductItemProps) {
 
     return (
         <div className={cls.product}>
-                <div className={cls.imageBlock}>
+                <Link to={`/product/${id}`} className={cls.imageBlock}>
                     <img alt={title} className={cls.img}
                          src={image}/>
-                </div>
+                </Link>
                 <div className={cls.buttons}>
                     <button className={cls.addBtn} onClick={() => addToDrawer(product, id)}>
                         <BsPlus />

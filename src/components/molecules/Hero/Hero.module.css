@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply relative container mx-auto flex px-5 py-20 items-center justify-center flex-col;
+    @apply relative container mx-auto flex p-0 lg:px-5 lg:py-20 items-center justify-center flex-col;
 }
 
 .image {
@@ -11,6 +11,6 @@
 }
 
 .btn {
-    @apply uppercase absolute left-20 bottom-1/3 bg-blue-400 px-4 py-2 hover:text-white
+    @apply  hidden lg:block  uppercase absolute left-20 bottom-1/3 bg-blue-400 px-4 py-2 hover:text-white
     hover:bg-blue-300 font-bold transition-all duration-300 rounded-2xl
 }

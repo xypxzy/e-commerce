@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply container px-5 lg:py-12 py-28 mx-auto
+    @apply container px-5 lg:pt-16 lg:pb-12 pt-28 pb-12 mx-auto
 }
 
 .productList {

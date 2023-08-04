@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply container px-5 py-24 mx-auto
+    @apply container px-5 lg:pt-40 pt-60 lg:pb-20 pb-40  mx-auto
 }
 
 .info {
